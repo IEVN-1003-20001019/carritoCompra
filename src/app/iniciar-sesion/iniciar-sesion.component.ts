@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./iniciar-sesion.component.css']
 })
 export class IniciarSesionComponent {
+  email: string = '';
+  password: string = '';
 
+  onSubmit() {
+    console.log('Iniciar Sesión', this.email, this.password);
+  }
 }

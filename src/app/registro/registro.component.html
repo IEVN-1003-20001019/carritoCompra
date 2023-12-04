@@ -1,1 +1,36 @@
-<p>registro works!</p>
+<form [formGroup]="registroForm" (ngSubmit)="submitForm()">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Registro de Usuario</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-form-field>
+          <input matInput placeholder="Nombre completo" formControlName="nombreCompleto" required>
+          <mat-error *ngIf="registroForm.get('nombreCompleto')?.hasError('required')">
+            El nombre completo es obligatorio.
+          </mat-error>
+        </mat-form-field>
+  
+        <mat-form-field>
+          <input matInput type="email" placeholder="Correo electrónico" formControlName="correoElectronico" required>
+          <mat-error *ngIf="registroForm.get('correoElectronico')?.hasError('required')">
+            El correo electrónico es obligatorio.
+          </mat-error>
+          <mat-error *ngIf="registroForm.get('correoElectronico')?.hasError('email')">
+            Por favor, ingrese un correo electrónico válido.
+          </mat-error>
+        </mat-form-field>
+  
+        <mat-form-field>
+          <input matInput type="password" placeholder="Contraseña" formControlName="contrasena" required>
+          <mat-error *ngIf="registroForm.get('contrasena')?.hasError('required')">
+            La contraseña es obligatoria.
+          </mat-error>
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" type="submit" [disabled]="registroForm.invalid">Registrarse</button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+  

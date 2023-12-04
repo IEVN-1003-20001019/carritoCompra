@@ -1,0 +1,11 @@
+
+.producto-card {
+    max-width: 300px;
+    margin: 10px;
+  }
+  
+  .precio {
+    color: green;
+    font-weight: bold;
+  }
+  
