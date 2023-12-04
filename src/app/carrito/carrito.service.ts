@@ -1,3 +1,4 @@
+
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
@@ -13,5 +14,14 @@ export class CarritoService {
     this.productosEnCarritoSubject.next([...productosEnCarrito, producto]);
   }
 
-  // Puedes agregar más métodos según sea necesario (eliminar del carrito, etc.)
+  eliminarDelCarrito(productoId: number) {
+    const productosEnCarrito = this.productosEnCarritoSubject.value;
+    const nuevosProductosEnCarrito = productosEnCarrito.filter(producto => producto.id !== productoId);
+    this.productosEnCarritoSubject.next(nuevosProductosEnCarrito);
+  }
+
+  limpiarCarrito() {
+    this.productosEnCarritoSubject.next([]);
+  }
+
 }

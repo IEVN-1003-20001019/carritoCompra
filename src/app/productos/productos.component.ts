@@ -10,7 +10,7 @@ export class ProductosComponent {
   constructor(private carritoService: CarritoService) {}
 
   productos = [
-    { id: 1, nombre: 'Mo China 1', precio: 5 },
+    { id: 1, nombre: 'Mona China 1', precio: 5 },
     { id: 2, nombre: 'Mona China 2', precio: 3 },
     { id: 3, nombre: 'Mona China 3', precio: 2 }
     // Se agregarán más
