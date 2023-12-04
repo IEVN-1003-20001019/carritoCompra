@@ -7,7 +7,7 @@ import { RegistroComponent } from './registro/registro.component';
 
 const routes: Routes = [
   {path: 'carrito', component: CarritoComponent},
-  {path: 'iniciarSesion', component: IniciarSesionComponent},
+  {path: 'iniciar-sesion', component: IniciarSesionComponent},
   {path: 'productos', component: ProductosComponent},
   {path: 'registro', component: RegistroComponent},
 
