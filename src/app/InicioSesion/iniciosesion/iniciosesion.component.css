@@ -17,11 +17,11 @@ body {
         position: absolute;
         left: 0;
         top: 0;
-        opacity: 0.5;
         width: 100%;
         height: 100%;
-        background: url("https://c4.wallpaperflare.com/wallpaper/621/859/641/peliculas-terror-wallpaper-preview.jpg");
+        background: url("https://scontent.fbjx4-1.fna.fbcdn.net/v/t1.6435-9/160921175_125810712883794_6723114927345866669_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=783fdb&_nc_eui2=AeH4nxi-53v9wemOSv8AV2nnZbIeS0xkxnxlsh5LTGTGfFsnyCWQiP9gJQ47KxyouIqzoctE_RkqAL0jJsvqxukj&_nc_ohc=aasihmRyNEYAX_3_NvW&_nc_ht=scontent.fbjx4-1.fna&oh=00_AfDdCWxcbmi5w7T1cxRSHxr-INsdl6edBIbfDl5FhufCCg&oe=659852BE");
         background-position: center;
+        object-fit: cover;
     }
     nav {
         position: fixed;
@@ -42,7 +42,7 @@ body {
         padding: 70px;
         width: 450px;
         transform: translate(-50%, -50%);
-        background: rgba(0, 0, 0, 0.75);
+        background: rgba(0, 0, 0, 0.434);
     }
 
         .form-wrapper h2 {
@@ -99,7 +99,7 @@ body {
         width: 100%;
         padding: 16px 0;
         font-size: 1rem;
-        background: #872341;
+        background: #5e95cc;
         color: #fff;
         font-weight: 500;
         border-radius: 4px;
@@ -110,7 +110,7 @@ body {
         transition: 0.1s ease;
     }
     form button:hover {
-        background: #872341;
+        background: #6d8baa;
     }
 
         .form-wrapper a {
