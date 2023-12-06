@@ -1,0 +1,37 @@
+    <div class="modal-header">
+        <h4 class="modal-title text-center v-100">Modificar Figura</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss()"></button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="mb-3">
+                <label for="inputTitulo" class="form-label">Titulo</label>
+                <input type="text" [(ngModel)]="titulo" [value]="figura.titulo" name="titulo" class="form-control" id="inputTitulo" aria-describedby="agregarTitulo">
+            </div>
+            <div class="mb-3">
+                <label for="inputcantidad" class="form-label">cantidad de lanzamiento</label>
+                <input type="text" [(ngModel)]="cantidad" [value]="figura.cantidad" name="cantidad" class="form-control" id="inputcantidad" aria-describedby="agregarcantidad">
+            </div>
+            <div class="mb-3">
+                <label for="inputEstilo" class="form-label">Genero</label>
+                <input type="text" [(ngModel)]="estilo" [value]="figura.estilo" name="estilo" class="form-control" id="inputEstilo" aria-describedby="agregarEstilo">
+            </div>
+            <div class="mb-3">
+                <label for="inputDescripcion" class="form-label">Descripcion</label>
+                <textarea [(ngModel)]="descripcion" [value]="figura.descripcion" name="descripcion" class="form-control" name="inputDescripcion" id="inputDescripcion" cols="30" rows="10"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="inputEstudio" class="form-label">Marca</label>
+                <input type="text" [(ngModel)]="marca" [value]="figura.marca" name="marca" class="form-control" id="inputMarca" aria-describedby="agregarMarca">
+            </div>
+            <div class="mb-3">
+                <label for="inputFoto" class="form-label">Número de Foto</label>
+                <input type="text" [(ngModel)]="photo" [value]="figura.photo" name="photo" class="form-control" id="inputFoto" aria-describedby="agregarFoto">
+            </div>
+               
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="activeModal.dismiss()">Cerrar</button>
+        <button type="submit" class="btn btn-success" (click)="enviarDatosModificar(); activeModal.dismiss()">Aceptar</button>
+    </div>

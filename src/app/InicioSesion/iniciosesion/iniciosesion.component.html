@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inicio sesión</title>
+</head>
+<body>
+
+  <nav>
+    <a href="#"><img src="#" alt="logo"></a>
+  </nav>
+  <div class="form-wrapper">
+    <h2>Iniciar Sesión</h2>
+    <form action="#">
+      <div class="form-control">
+        <input type="text" [(ngModel)]="email" name="email" required>
+        <label>Correo</label>
+      </div>
+      <div class="form-control">
+        <input type="password" [(ngModel)]="password" name="pass" required>
+        <label>Contraseña</label>
+      </div>
+      <button type="submit" (click)="buscarUsuario()">Iniciar Sesión</button>
+    </form>
+    <p>¿Eres nuevo? <a routerLink="/registro">Registrate ahora</a></p>
+  </div>
+
+  
+</body>
+</html>

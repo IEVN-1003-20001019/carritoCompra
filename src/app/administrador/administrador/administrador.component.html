@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrador</title>
+</head>
+<body>
+  <header>
+    <h1>Administrador de figuras</h1> &nbsp;&nbsp;&nbsp;
+    <nav class="d-flex align-items-center">
+      <a style="text-decoration: none;" routerLink="/figuras">Regresar</a>
+  </nav>
+  </header>
+  <div class="btnAgregarCss">
+    <button class="btn btn-success" type="button" (click)="abrirModalAgregar()">Agregar Figura</button>
+  </div>
+  <section class="container">
+    
+    <table class="table tableAdmin">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Titulo</th>
+          <th scope="col">Cantidad</th>
+          <th scope="col">Estilo</th>
+          <th scope="col">Descripcion</th>
+          <th scope="col">Marca</th>
+          <th scope="col">Foto</th>
+          <th scope="col">Actualizar</th>
+          <th scope="col">Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let figura of listaFiguras;">
+          <th scope="row">{{figura.id}}</th>
+          <td>{{ figura.titulo }}</td>
+          <td>{{ figura.cantidad }}</td>
+          <td>{{ figura.estilo }}</td>
+          <td>{{ figura.descripcion }}</td>
+          <td>{{ figura.marca }}</td>
+          <td class="imgTable"><img class="imgModal" [src]="'../../../assets/'+figura.photo+'.jpg'" [alt]="figura.titulo"></td>
+          <td>
+            <button (click)="abrirModalEditar(figura)"> &#x21ba; </button>
+          </td>
+          <td>
+            <button (click)="abrirModalEliminar(figura.id)"> &#x2327; </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</body>
+</html>

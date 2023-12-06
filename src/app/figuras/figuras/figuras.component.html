@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Figuras</title>
+</head>
+<body>
+    <header>
+        <img class="logo" src="../../../assets/Logo.png" alt="Logo">
+        <nav class="d-flex align-items-center">
+            <a style="text-decoration: none;" routerLink="/administrador">Administrar Figuras</a> &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+            <a style="text-decoration: none;" routerLink="/iniciar-sesion">Cerrar Sesión</a>
+        </nav>
+    </header>
+
+    <div class="tituloPeliculas">
+        <h2>FIGURAS</h2>
+    </div>
+    <section class="main-content">
+        <!--Lista de Series-->
+        <div class="movie-list">
+            <div class="movie-card" *ngFor="let figura of listaFiguras;">
+                <button class="peliss" type="button" (click)="abrirModal(figura)">
+                <img class="pelis2" [src]="'../../../assets/'+figura.photo+'.jpg'" [alt]="figura.titulo"></button>
+            </div>
+        </div>
+    </section>
+
+    
+<!-- Carrito de compras -->
+<section class="cart-content">
+    <div class="tituloPeliculas">
+        <h2>CARRITO</h2>
+    </div>
+    <ul>
+        <li *ngFor="let item of carrito">
+            {{ item.titulo }} - Cantidad: {{ item.cantidad }}
+            <button (click)="eliminarDelCarrito(item)">Eliminar</button>
+        </li>
+    </ul>
+</section>
+
+    </body>
+
+</html>

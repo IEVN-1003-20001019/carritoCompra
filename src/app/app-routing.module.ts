@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CarritoComponent } from './carrito/carrito.component';
-import { IniciarSesionComponent } from './iniciar-sesion/iniciar-sesion.component';
-import { ProductosComponent } from './productos/productos.component';
-import { RegistroComponent } from './registro/registro.component';
+import { IniciosesionComponent } from './InicioSesion/iniciosesion/iniciosesion.component';
+import { RegistrarComponent } from './registrar/registrar/registrar.component';
+import { FigurasComponent } from './figuras/figuras/figuras.component'
+import { AdministradorComponent } from './administrador/administrador/administrador.component'
 
 const routes: Routes = [
-  {path: 'carrito', component: CarritoComponent},
-  {path: 'iniciar-sesion', component: IniciarSesionComponent},
-  {path: 'productos', component: ProductosComponent},
-  {path: 'registro', component: RegistroComponent},
-
-  { path: '', redirectTo: '/productos', pathMatch: 'full' }, // Redirecciona a productos por defecto
+  {path: '', redirectTo: '/iniciar-sesion', pathMatch: 'full'},
+  {path: 'iniciar-sesion', component:IniciosesionComponent },
+  {path: 'registro', component:RegistrarComponent},
+  {path: 'figuras', component:FigurasComponent},
+  {path: 'administrador', component:AdministradorComponent}
+  
 ];
 
 @NgModule({
